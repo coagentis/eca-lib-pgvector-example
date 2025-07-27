@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres-eca:
+    image: pgvector/pgvector:pg16
+    container_name: postgres-eca
+    environment:
+      - POSTGRES_USER=eca_user
+      - POSTGRES_PASSWORD=eca_password
+      - POSTGRES_DB=eca_db
+    ports:
+      - "55432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis-eca:
+    image: redis:7-alpine
+    container_name: redis-eca
+    ports:
+      - "6380:6379"
+
+volumes:
+  postgres_data:
