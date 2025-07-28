@@ -52,8 +52,8 @@ Siga os passos abaixo para rodar o ambiente completo.
 ### 2\. Clone o Repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO_PROD.git
-cd SEU_REPOSITORIO_PROD
+git clone https://github.com/coagentis/eca-lib-pgvector-example.git
+cd eca-lib-pgvector-example.git
 ```
 
 ### 3\. Inicie a Infraestrutura
