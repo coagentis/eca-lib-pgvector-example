@@ -3,7 +3,8 @@ import eca.database.schema
 print("Aplicando patch correto na eca-lib para evitar redefinição de tabelas...")
 
 original_get_schema_models = eca.database.schema.get_schema_models
-_cached_models_by_dim = {}  # Cache baseado na dimensão
+# Cache baseado na dimensão
+_cached_models_by_dim = {} 
 
 def patched_get_schema_models(vector_dimension):
     if vector_dimension not in _cached_models_by_dim:
